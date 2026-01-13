@@ -1,0 +1,25 @@
+﻿@model ErrorViewModel
+@{
+    ViewData["Title"] = "Viga";
+}
+
+<h1 class="text-danger">Viga.</h1>
+<h2 class="text-danger">Teie päringu töötlemisel tekkis viga.</h2>
+
+@if (Model.ShowRequestId)
+{
+    <p>
+        <strong>Päringu ID:</strong> <code>@Model.RequestId</code>
+    </p>
+}
+
+<h3>Arendusrežiim</h3>
+<p>
+    Lülitumine <strong>Arendus</strong> keskkonnale kuvab üksikasjalikumat teavet tekkinud vea kohta.
+</p>
+<p>
+    <strong>Arenduskeskkonda ei tohiks juurutatud rakenduste jaoks lubada.</strong>
+    See võib põhjustada tundliku teabe kuvamise eranditest lõppkasutajatele.
+    Kohaliku silumise jaoks lubage <strong>Arendus</strong> keskkond, seades <strong>ASPNETCORE_ENVIRONMENT</strong> keskkonna muutuja väärtuseks <strong>Development</strong>
+    ja taaskäivitades rakenduse.
+</p>

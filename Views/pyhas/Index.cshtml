@@ -1,0 +1,41 @@
+@model IEnumerable<WebApplication2.Models.Pyha>
+
+@{
+    ViewData["Title"] = "Pühad";
+}
+
+<h1>Pühad</h1>
+
+<p>
+    <a asp-action="Create">Lisa uus</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Nimetus)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Kuupaev)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Nimetus)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Kuupaev)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Id">Muuda</a> |
+                <a asp-action="Details" asp-route-id="@item.Id">Detailid</a> |
+                <a asp-action="Delete" asp-route-id="@item.Id">Kustuta</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

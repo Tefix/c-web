@@ -1,0 +1,33 @@
+@model WebApplication2.Models.Pyha
+
+@{
+    ViewData["Title"] = "Kustuta";
+}
+
+<h1>Kustuta</h1>
+
+<h3>Kas olete kindel, et soovite selle kustutada?</h3>
+<div>
+    <h4>Püha</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Nimetus)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Nimetus)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Kuupaev)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Kuupaev)
+        </dd>
+    </dl>
+    
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="Id" />
+        <input type="submit" value="Kustuta" class="btn btn-danger" /> |
+        <a asp-action="Index">Tagasi nimekirja</a>
+    </form>
+</div>

@@ -1,0 +1,27 @@
+@model WebApplication2.Models.Kylaline
+@{
+    ViewBag.Title = "Tanan osalemise eest!";
+}
+<h2>Aitah, @Model.Nimi!</h2>
+<p>Sinu vastus on edukalt salvestatud.</p>
+
+@{
+    var pyhaNimetus = ViewBag.pyhanimetus;
+}
+
+@if (Model.OnKutse)
+{
+    <p class="text-success">
+        <strong>Rõõm kuulda! Ootame sind üritusele @pyhaNimetus!</strong>
+    </p>
+}
+else
+{
+    <p class="text-danger">
+        <strong>Kahju, et ei saa tulla üritusele @pyhaNimetus!</strong>
+    </p>
+}
+
+<img src="~/images/pilt.png" style="width:300px;" alt="Pilt" />
+
+<p><a href="@Url.Action("Index","Home")">Tagasi avalehele</a></p>

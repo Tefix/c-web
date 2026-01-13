@@ -1,0 +1,35 @@
+@model WebApplication2.Models.Pyha
+
+@{
+    ViewData["Title"] = "Lisa";
+}
+
+<h1>Lisa</h1>
+
+<h4>Püha</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Nimetus" class="control-label"></label>
+                <input asp-for="Nimetus" class="form-control" />
+                <span asp-validation-for="Nimetus" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Kuupaev" class="control-label"></label>
+                <input asp-for="Kuupaev" class="form-control" />
+                <span asp-validation-for="Kuupaev" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Lisa" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Tagasi nimekirja</a>
+</div>
+

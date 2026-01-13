@@ -420,3 +420,4 @@ C:\Users\ihave\RiderProjects\WebApplication2\WebApplication2\obj\Debug\net9.0\co
 C:\Users\ihave\RiderProjects\WebApplication2\WebApplication2\obj\Debug\net9.0\compressed\wpz0wag3v8-{0}-yewmli5klq-yewmli5klq.gz
 C:\Users\ihave\RiderProjects\WebApplication2\WebApplication2\obj\Debug\net9.0\swae.build.ex.cache
 C:\Users\ihave\RiderProjects\WebApplication2\WebApplication2\obj\Debug\net9.0\compressed\k1f9l0phhg-{0}-9o6tekiqbg-9o6tekiqbg.gz
+C:\Users\ihave\RiderProjects\WebApplication2\WebApplication2\obj\Debug\net9.0\WebApplication2.sourcelink.json

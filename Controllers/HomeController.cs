@@ -54,8 +54,10 @@ public class HomeController : Controller
     private void SendEmail(Kylaline kylaline)
     {
         var pyha = _context.Pyha?.FirstOrDefault(p => p.Id == kylaline.PyhaId)?.Nimetus;
+        var mail = new System.Net.Mail.MailMessage("ihavearm0@gmail.com", kylaline.Email, "Kutse: " + pyha, $"Tere, {kylaline.Nimi}!\n\nSinu vastus on registreeritud.\nÜritus: {pyha}\nOsalemine: {(kylaline.OnKutse ? "Jah" : "Ei")}");
+        mail.Attachments.Add(new System.Net.Mail.Attachment("images/Funnypic.png"));
         System.Net.Mail.SmtpClient smtp = new("smtp.gmail.com", 587) { Credentials = new System.Net.NetworkCredential("ihavearm0@gmail.com", "pohb txpq djxx ovjk"), EnableSsl = true };
-        smtp.Send("ihavearm0@gmail.com", kylaline.Email, "Kutse: " + pyha, $"Tere, {kylaline.Nimi}!\n\nSinu vastus on registreeritud.\nÜritus: {pyha}\nOsalemine: {(kylaline.OnKutse ? "Jah" : "Ei")}");
+        smtp.Send(mail);
     }
 
     public ActionResult Tanav(int id)
